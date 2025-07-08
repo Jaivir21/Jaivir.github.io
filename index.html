@@ -6,32 +6,101 @@
     body {
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1.animate-name {
       text-align: center;
-      color: darkblue;
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 10px;
+      margin-top: 50px;
     }
+
+    h1.animate-name span {
+      display: inline-block;
+      color: darkblue;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInBounce 1.5s infinite;
+    }
+
+    h1.animate-name span:nth-child(1) { animation-delay: 0s; }
+    h1.animate-name span:nth-child(2) { animation-delay: 0.04s; }
+    h1.animate-name span:nth-child(3) { animation-delay: 0.07s; }
+    h1.animate-name span:nth-child(4) { animation-delay: 0.1s; }
+    h1.animate-name span:nth-child(5) { animation-delay: 0.14s; }
+    h1.animate-name span:nth-child(6) { animation-delay: 0.2s; }
+
+    @keyframes fadeInBounce {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      30% {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      60% {
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+
+    .section {
+      background-color: white;
+      padding: 20px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    h1{
+      text-align:center;
+      color:red;
+    }
+
     h2 {
       color: darkgreen;
     }
-    .section {
-      background-color: white;
-      padding: 15px;
-      margin: 20px;
-      border: 1px solid #ccc;
-    }
+
     ul {
       margin-left: 20px;
     }
+
     a {
       color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
+  <div class="container">
+    <h1 class="animate-name">
+      <span>J</span><span>A</span><span>I</span><span>V</span><span>I</span><span>R</span>
+    </h1>
   <h1>Jaivir's Portfolio </h1>
-  <h1>Grateful to welcome you</h1>
+  <h1>Grateful to Welcome you!!</h1>
   <p style="text-align:center;">Student | B.Tech(CSE) | Dronacharya College of Engineering Gurugram</p>
 
   <div class="section">
@@ -64,6 +133,9 @@
     <h2>Contact: 9560614319</h2>
     <p>Email: jaiviryadav2106@gmail.com</p>
     <p>LinkedIn: <a href="#">https://www.linkedin.com/in/jaivir-yadav-0a8429289</a></p>
+  </div>
+  
+  <footer><p>&copy; 2025 Jaivir. All rights reserved.</p></footer>
   </div>
 
 </body>
